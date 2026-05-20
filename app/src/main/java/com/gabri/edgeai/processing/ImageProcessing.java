@@ -138,4 +138,6 @@ public class ImageProcessing {
     private int applyBitmask (int rgbPixelValue) {
         return rgbPixelValue & 0xFF;
     }
+
+    // prova git
 }
