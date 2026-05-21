@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.ImageDecoder;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -51,7 +52,8 @@ public class MainActivity extends AppCompatActivity implements IRecognitionDone 
         arlTakePhoto = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 result -> {
-                    if ((result.getResultCode() != RESULT_OK) || (result.getData() != null))
+                    Log.i(TAG, "");
+                    if ((result.getResultCode() != RESULT_OK) || (result.getData() == null))
                         return;
 
                     Bundle bundle = result.getData().getExtras();

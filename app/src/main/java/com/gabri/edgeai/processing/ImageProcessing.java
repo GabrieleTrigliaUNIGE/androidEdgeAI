@@ -5,6 +5,8 @@ import android.graphics.Bitmap;
 import android.os.Handler;
 import android.os.Looper;
 
+import com.gabri.edgeai.ml.Model;
+
 import com.gabri.edgeai.interfaces.IRecognitionDone;
 import com.gabri.edgeai.misc.Constants;
 
@@ -14,6 +16,8 @@ import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+
+// Ignore errors the program will compile and run anyway
 
 public class ImageProcessing {
 
@@ -138,6 +142,4 @@ public class ImageProcessing {
     private int applyBitmask (int rgbPixelValue) {
         return rgbPixelValue & 0xFF;
     }
-
-    // prova git
 }
